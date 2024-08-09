@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "tutorialmod",
 	"version": "${version}",
-	"name": "Tutorial Mod",
+	"name": "Tutorial Mod v.0.0.1",
 	"description": "Learning with Kaupenjoe tutorial on YT",
 	"authors": [
 		"iSimply_"
