@@ -1,6 +1,8 @@
 {
-  "item.tutorialmod.firstitem": "Ham & Cheese",
-  "item.tutorialmod.seconditem": "Weird Sandwich",
-  "item.tutorialmod.thirditem": "weirder Sandwich",
-  "itemgroup.sandwiches": "Sandwiches Group"
+  "item.tutorialmod.moss": "Moss",
+
+  "block.tutorialmod.mossyplanks": "Mossy Planks",
+
+  "itemgroup.sandwiches": "Mod Items",
+  "itemgroup.modblocks": "Mod Blocks"
 }

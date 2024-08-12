@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "###",
+    "#p#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tutorialmod:moss"
+    },
+    "p": {
+      "item": "minecraft:oak_planks"
+    }
+  },
+  "result" : {
+    "item" : "tutorialmod:mossyplanks",
+    "count" : 1
+  }
+
+}

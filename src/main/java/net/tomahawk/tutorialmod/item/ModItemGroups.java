@@ -9,15 +9,20 @@ import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.tomahawk.tutorialmod.TutorialMod;
+import net.tomahawk.tutorialmod.block.ModBlocks;
 
 public class ModItemGroups {
     public static final ItemGroup SANDWITCHES = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "sandwiches"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandwiches"))
                     .icon(() -> new ItemStack(Items.BREAD)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.FIRSTITEM);
-                        entries.add(ModItems.SECONDITEM);
-                        entries.add(ModItems.THIRDITEM);
+                        entries.add(ModItems.MOSS);
 
+                    }).build());
+
+    public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modblocks"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.modblocks"))
+                    .icon(() -> new ItemStack(Items.OAK_PLANKS)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.MOSSYPLANKS);
                     }).build());
 
     public static void registerItemGroups() {
