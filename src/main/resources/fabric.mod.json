@@ -18,12 +18,6 @@
 		"main": [
 			"net.tomahawk.tutorialmod.TutorialMod"
 		],
-		"client": [
-			"net.tomahawk.tutorialmod.TutorialModClient"
-		],
-		"server": [
-			"net.tomahawk.tutorialmod.TutorialModServer"
-		],
 		"fabric-datagen": [
 			"net.tomahawk.tutorialmod.TutorialModDataGenerator"
 		]
