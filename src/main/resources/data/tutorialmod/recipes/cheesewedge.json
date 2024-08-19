@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 180,
+  "ingredient": {
+    "item": "minecraft:milk_bucket"
+  },
+  "result" : "tutorialmod:cheesewedge",
+  "count": 3
+}

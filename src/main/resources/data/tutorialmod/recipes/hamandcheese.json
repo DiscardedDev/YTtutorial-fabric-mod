@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "foodstuffs",
+  "key": {
+    "#": {
+      "item": "minecraft:bread"
+    },
+    "c": {
+      "item": "tutorialmod:cheeseslice"
+    },
+    "p": {
+      "item": "tutorialmod:hamslice"
+    }
+  },
+  "pattern": [
+    "c",
+    "p",
+    "#"
+  ],
+
+
+  "result" : {
+    "item" : "tutorialmod:hamandcheese",
+    "count" : 1
+  }
+
+}

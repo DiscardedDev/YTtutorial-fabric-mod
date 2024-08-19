@@ -12,11 +12,11 @@ import net.tomahawk.tutorialmod.TutorialMod;
 import net.tomahawk.tutorialmod.block.ModBlocks;
 
 public class ModItemGroups {
-    public static final ItemGroup SANDWITCHES = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "sandwiches"),
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.sandwiches"))
-                    .icon(() -> new ItemStack(Items.BREAD)).entries((displayContext, entries) -> {
+    public static final ItemGroup ITEMS = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "moditems"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.moditems"))
+                    .icon(() -> new ItemStack(ModItems.METALDETECT)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.METALDETECT);
                         entries.add(ModItems.MOSS);
-
                     }).build());
 
     public static final ItemGroup BLOCKS = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modblocks"),
@@ -25,6 +25,23 @@ public class ModItemGroups {
                         entries.add(ModBlocks.MOSSYPLANKS);
                     }).build());
 
+    public static final ItemGroup FOOD = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modfood"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.modfood"))
+                    .icon(() -> new ItemStack(Items.BREAD)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.HAM_AND_CHEESE);
+                        entries.add(ModItems.CHEESESLICE);
+                        entries.add(ModItems.CHEESEWEDGE);
+                        entries.add(ModItems.HAMSLICE);
+                    }).build());
+
+    public static final ItemGroup COMBAT = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modcombat"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.modcombat"))
+                    .icon(() -> new ItemStack(ModItems.COPPER_HELMET)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.COPPER_HELMET);
+                        entries.add(ModItems.COPPER_CHESTPLATE);
+                        entries.add(ModItems.COPPER_LEGGINGS);
+                        entries.add(ModItems.COPPER_BOOTS);
+                    }).build());
     public static void registerItemGroups() {
         TutorialMod.LOGGER.info("Registering Item Groups for " + TutorialMod.MOD_ID);
     }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "foodstuffs",
+  "ingredients": [
+    {
+      "item": "minecraft:porkchop"
+    }
+  ],
+
+
+  "result" : {
+    "item" : "tutorialmod:hamslice",
+    "count" : 6
+  }
+
+}

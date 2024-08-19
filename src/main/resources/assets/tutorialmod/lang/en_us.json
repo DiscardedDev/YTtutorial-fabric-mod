@@ -1,8 +1,21 @@
 {
   "item.tutorialmod.moss": "Moss",
+  "item.tutorialmod.metaldetect": "Metal Detector",
 
+  "item.tutorialmod.copper_helmet": "Copper Helmet",
+  "item.tutorialmod.copper_chestplate": "Copper Chestplate",
+  "item.tutorialmod.copper_leggings": "Copper Leggings",
+  "item.tutorialmod.copper_boots": "Copper Boots",
+
+  "item.tutorialmod.hamandcheese": "Ham & Cheese",
+  "item.tutorialmod.hamslice": "Ham Slice",
+  "item.tutorialmod.cheeseslice": "Cheese Slice",
+  "item.tutorialmod.cheesewedge": "Cheese Wedge",
   "block.tutorialmod.mossyplanks": "Mossy Planks",
 
-  "itemgroup.sandwiches": "Mod Items",
-  "itemgroup.modblocks": "Mod Blocks"
+
+  "itemgroup.moditems": "Mod Items",
+  "itemgroup.modblocks": "Mod Blocks",
+  "itemgroup.modfood": "Mod Food & Drink",
+  "itemgroup.modcombat": "Mod Combat"
 }

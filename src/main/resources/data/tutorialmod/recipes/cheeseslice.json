@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "foodstuffs",
+  "ingredients": [
+    {
+      "item": "tutorialmod:cheesewedge"
+    }
+  ],
+
+
+  "result" : {
+    "item" : "tutorialmod:cheeseslice",
+    "count" : 6
+  }
+
+}

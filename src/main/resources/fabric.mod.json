@@ -2,8 +2,8 @@
 	"schemaVersion": 1,
 	"id": "tutorialmod",
 	"version": "${version}",
-	"name": "Tutorial Mod v.0.0.1",
-	"description": "Learning with Kaupenjoe tutorial on YT",
+	"name": "Server Additions",
+	"description": "Additions for home server",
 	"authors": [
 		"iSimply_"
 	],
@@ -12,7 +12,7 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorialmod/textures/block/mossyplanks.png",
+	"icon": "assets/tutorialmod/textures/item/copper_helmet.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
