@@ -7,6 +7,13 @@
   "item.tutorialmod.copper_leggings": "Copper Leggings",
   "item.tutorialmod.copper_boots": "Copper Boots",
 
+  "item.tutorialmod.copper_pickaxe": "Copper Pickaxe",
+  "item.tutorialmod.copper_sword": "Copper Sword",
+  "item.tutorialmod.copper_axe": "Copper Axe",
+  "item.tutorialmod.copper_shovel": "Copper Shovel",
+  "item.tutorialmod.copper_hoe": "Copper Hoe",
+
+
   "item.tutorialmod.hamandcheese": "Ham & Cheese",
   "item.tutorialmod.hamslice": "Ham Slice",
   "item.tutorialmod.cheeseslice": "Cheese Slice",
@@ -17,5 +24,6 @@
   "itemgroup.moditems": "Mod Items",
   "itemgroup.modblocks": "Mod Blocks",
   "itemgroup.modfood": "Mod Food & Drink",
-  "itemgroup.modcombat": "Mod Combat"
+  "itemgroup.modcombat": "Mod Combat",
+  "itemgroup.modtools": "Mod Tools"
 }

@@ -36,11 +36,23 @@ public class ModItemGroups {
 
     public static final ItemGroup COMBAT = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modcombat"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.modcombat"))
-                    .icon(() -> new ItemStack(ModItems.COPPER_HELMET)).entries((displayContext, entries) -> {
+                    .icon(() -> new ItemStack(ModItems.COPPER_SWORD)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.COPPER_SWORD);
+                        entries.add(ModItems.COPPER_AXE);
                         entries.add(ModItems.COPPER_HELMET);
                         entries.add(ModItems.COPPER_CHESTPLATE);
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
+
+                    }).build());
+    public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modtools"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.modtools"))
+                    .icon(() -> new ItemStack(ModItems.COPPER_PICKAXE)).entries((displayContext, entries) -> {
+                        entries.add(ModItems.COPPER_PICKAXE);
+                        entries.add(ModItems.COPPER_SHOVEL);
+                        entries.add(ModItems.COPPER_AXE);
+                        entries.add(ModItems.COPPER_HOE);
+
                     }).build());
     public static void registerItemGroups() {
         TutorialMod.LOGGER.info("Registering Item Groups for " + TutorialMod.MOD_ID);
