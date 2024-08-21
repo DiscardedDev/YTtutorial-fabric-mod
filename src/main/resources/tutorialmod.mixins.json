@@ -3,7 +3,7 @@
 	"package": "net.tomahawk.tutorialmod.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-      "FurnaceBucketMixin"
+      "FurnaceRecipeRemainderMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
