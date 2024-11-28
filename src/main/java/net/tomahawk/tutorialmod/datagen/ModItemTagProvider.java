@@ -20,5 +20,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.COPPER_HELMET, ModItems.COPPER_CHESTPLATE, ModItems.COPPER_LEGGINGS, ModItems.COPPER_BOOTS);
         getOrCreateTagBuilder(ModTags.Items.ABILITY_ARROWS)
                 .add(ModItems.ABILITY_ARROW);
+
     }
 }

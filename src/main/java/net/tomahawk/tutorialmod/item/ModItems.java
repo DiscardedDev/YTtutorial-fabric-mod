@@ -36,10 +36,12 @@ public class ModItems {
     public static final Item HAMSLICE = registerItem("hamslice", new Item(new FabricItemSettings().food(ModFoodComponents.CHEESESLICE)));
 
 
+    public static final Item ABILITY_ARROW = registerItem("ability_arrow", new AbilityArrowItem(new Item.Settings()));
     public static final Item TNT_BOW = registerItem("tnt_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.TNT));
     public static final Item WATER_BOW = registerItem("water_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.WATER));
-    public static final Item ABILITY_ARROW = registerItem("ability_arrow", new AbilityArrowItem(new Item.Settings()));
     public static final Item EXPLOSION_BOW = registerItem("explosion_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.EXPLOSION));
+    public static final Item MOLTEN_BOW = registerItem("molten_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.MOLTEN));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item); //code to register item within the registry in minecraft
     }

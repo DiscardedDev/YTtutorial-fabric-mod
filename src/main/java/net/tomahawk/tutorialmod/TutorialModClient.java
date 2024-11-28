@@ -13,6 +13,8 @@ public class TutorialModClient implements ClientModInitializer {
     public void onInitializeClient() {
         registerBowModelPredicateProviders(ModItems.TNT_BOW);
         registerBowModelPredicateProviders(ModItems.WATER_BOW);
+        registerBowModelPredicateProviders(ModItems.EXPLOSION_BOW);
+        registerBowModelPredicateProviders(ModItems.MOLTEN_BOW);
     }
 
     public static void registerBowModelPredicateProviders(Item item) {

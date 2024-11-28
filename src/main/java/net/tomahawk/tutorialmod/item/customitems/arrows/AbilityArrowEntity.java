@@ -31,23 +31,11 @@ public class AbilityArrowEntity extends PersistentProjectileEntity {
         return new ItemStack(Items.ARROW);
     }
 
-    public void initFromStack(ItemStack stack) {
-
-    }
 
     @Override
     public void tick() {
         super.tick();
 
-//        if (this.getWorld().isClient) {
-//            if (this.inGround) {
-//                if (this.inGroundTime % 5 == 0) {
-//                    this.spawnParticles(1);
-//                }
-//            } else {
-//                this.spawnParticles(2);
-//            }
-//        } else
         if (this.inGround && this.inGroundTime != 0 && this.inGroundTime >= 600) {
             this.getWorld().sendEntityStatus(this, (byte) 0);
         }
@@ -59,9 +47,9 @@ public class AbilityArrowEntity extends PersistentProjectileEntity {
         World world = this.getWorld();
         BlockPos pos = blockHitResult.getBlockPos();
         //handle arrow effects based on the bow type
-
         handleAbilities(world, pos);
     }
+
 
     private void handleAbilities(World world, BlockPos pos) {
         // TNT
@@ -107,26 +95,5 @@ public class AbilityArrowEntity extends PersistentProjectileEntity {
 
         hasDoneAbility = true; //set the arrow as used to prevent the ability from being used again
     }
-
 }
-//    private void spawnParticles(int amount) {
-//        int i = this.getColor();
-//        if (i != -1 && amount > 0) {
-//            double d = (double)(i >> 16 & 0xFF) / 255.0;
-//            double e = (double)(i >> 8 & 0xFF) / 255.0;
-//            double f = (double)(i >> 0 & 0xFF) / 255.0;
-//
-//            for (int j = 0; j < amount; j++) {
-//                this.getWorld().addParticle(ParticleTypes.ENTITY_EFFECT, this.getParticleX(0.5), this.getRandomBodyY(), this.getParticleZ(0.5), d, e, f);
-//            }
-//        }
-
-//    public int getColor() {
-//        return this.dataTracker.get(COLOR);
-//    }
-//
-//    private void setColor(int color) {
-//        this.colorSet = true;
-//        this.dataTracker.set(COLOR, color);
-//    }
 

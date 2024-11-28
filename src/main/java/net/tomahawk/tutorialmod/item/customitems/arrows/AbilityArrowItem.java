@@ -3,7 +3,6 @@ package net.tomahawk.tutorialmod.item.customitems.arrows;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ArrowItem;
-import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.tomahawk.tutorialmod.item.customitems.enums.AbilityBowType;
 
@@ -14,10 +13,8 @@ public class AbilityArrowItem extends ArrowItem {
         super(settings);
     }
 
-    public PersistentProjectileEntity createArrow(World world, ItemStack stack, LivingEntity shooter, AbilityBowType type) {
+    public PersistentProjectileEntity createArrow(World world, LivingEntity shooter, AbilityBowType type) {
 
-        AbilityArrowEntity abilityArrowEntity = new AbilityArrowEntity(world, shooter, type);
-        abilityArrowEntity.initFromStack(stack);
-        return abilityArrowEntity;
+        return new AbilityArrowEntity(world, shooter, type);
     }
 }
