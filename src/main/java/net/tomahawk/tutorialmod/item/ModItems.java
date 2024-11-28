@@ -8,6 +8,7 @@ import net.minecraft.util.Identifier;
 import net.tomahawk.tutorialmod.TutorialMod;
 import net.tomahawk.tutorialmod.item.customitems.AbilityBowItem;
 import net.tomahawk.tutorialmod.item.customitems.MetalDetectorItem;
+import net.tomahawk.tutorialmod.item.customitems.arrows.AbilityArrowItem;
 import net.tomahawk.tutorialmod.item.customitems.enums.AbilityBowType;
 import net.tomahawk.tutorialmod.item.customitems.enums.ModArmorMaterial;
 import net.tomahawk.tutorialmod.item.customitems.ModFoodComponents;
@@ -35,9 +36,10 @@ public class ModItems {
     public static final Item HAMSLICE = registerItem("hamslice", new Item(new FabricItemSettings().food(ModFoodComponents.CHEESESLICE)));
 
 
-    public static final Item TEST_BOW = registerItem("test_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.TNT));
-
-
+    public static final Item TNT_BOW = registerItem("tnt_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.TNT));
+    public static final Item WATER_BOW = registerItem("water_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.WATER));
+    public static final Item ABILITY_ARROW = registerItem("ability_arrow", new AbilityArrowItem(new Item.Settings()));
+    public static final Item EXPLOSION_BOW = registerItem("explosion_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.EXPLOSION));
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(TutorialMod.MOD_ID, name), item); //code to register item within the registry in minecraft
     }

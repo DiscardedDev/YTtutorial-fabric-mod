@@ -2,8 +2,6 @@ package net.tomahawk.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.minecraft.client.item.ModelPredicateProviderRegistry;
-import net.minecraft.util.Identifier;
 import net.tomahawk.tutorialmod.block.ModBlocks;
 import net.tomahawk.tutorialmod.item.ModItemGroups;
 import net.tomahawk.tutorialmod.item.ModItems;

@@ -13,14 +13,17 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
+import net.tomahawk.tutorialmod.item.ModItems;
 import net.tomahawk.tutorialmod.item.customitems.arrows.AbilityArrowItem;
 import net.tomahawk.tutorialmod.item.customitems.enums.AbilityBowType;
+import net.tomahawk.tutorialmod.util.ModTags;
 
 import java.util.function.Predicate;
 
 public class AbilityBowItem extends RangedWeaponItem implements Vanishable{
 public static final int TICKS_PER_SECOND = 20;
-public final int RANGE;
+private static final Predicate<ItemStack> BOW_PROJECTILES = stack -> stack.isIn(ModTags.Items.ABILITY_ARROWS);
+private final int RANGE;
 public final AbilityBowType type;
 
 
@@ -38,7 +41,7 @@ public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int 
         // boolean for if player is in creative or has infinity enchantment
         boolean HasInfiniteArrows = playerEntity.getAbilities().creativeMode || EnchantmentHelper.getLevel(Enchantments.INFINITY, stack) > 0;
         //get arrows for type of bow
-        ItemStack itemStack = playerEntity.getProjectileType(stack);
+        ItemStack itemStack = ModItems.ABILITY_ARROW.getDefaultStack();
 
         //does the player have arrows? or required to have arrows? (Infinite arrows or creative)
         if (!itemStack.isEmpty() || HasInfiniteArrows) {
@@ -59,7 +62,7 @@ public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int 
                 if (!world.isClient) {
                     //here we get the arrow item and start spawning the entity equivalent using the method in the arrow class
                     //in our ability bow we are adding a parameter to the createArrow of what type of bow we are.
-                    AbilityArrowItem abilityArrowItem = (AbilityArrowItem) (itemStack.getItem() instanceof AbilityArrowItem ? itemStack.getItem() : Items.ARROW);
+                    AbilityArrowItem abilityArrowItem = (AbilityArrowItem) itemStack.getItem();
                     PersistentProjectileEntity persistentProjectileEntity = abilityArrowItem.createArrow(world, itemStack, playerEntity, type);
 
 

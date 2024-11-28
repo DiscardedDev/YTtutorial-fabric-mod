@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "tutorialmod:item/test_bow_pulling_1"
+    "layer0": "tutorialmod:item/tnt_bow_pulling_2"
   }
 }
