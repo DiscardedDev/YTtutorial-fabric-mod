@@ -8,6 +8,7 @@ import net.minecraft.entity.projectile.PersistentProjectileEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.hit.BlockHitResult;
+import net.minecraft.util.hit.EntityHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.tomahawk.tutorialmod.item.customitems.enums.AbilityBowType;
@@ -50,6 +51,14 @@ public class AbilityArrowEntity extends PersistentProjectileEntity {
         handleAbilities(world, pos);
     }
 
+    @Override
+    protected void onEntityHit(EntityHitResult entityHitResult){
+        super.onEntityHit(entityHitResult);
+        World world = this.getWorld();
+        BlockPos pos = entityHitResult.getEntity().getBlockPos();
+        //handle arrow effects based on the bow type
+        handleAbilities(world, pos);
+    }
 
     private void handleAbilities(World world, BlockPos pos) {
         // TNT
@@ -79,16 +88,11 @@ public class AbilityArrowEntity extends PersistentProjectileEntity {
 
         // WATER
         else if(type == AbilityBowType.WATER &&!hasDoneAbility) {
-            //spawn water in area around the position if block is air
-            for(int x = -1; x <= 1; x++) {
-                for(int y = -1; y <= 1; y++) {
-                    for(int z = -1; z <= 1; z++) {
-                        BlockPos newPos = pos.add(x, y, z);
-                        if(world.getBlockState(newPos).isAir()) {
-                            world.setBlockState(newPos, Blocks.WATER.getDefaultState());
-                        }
-                    }
-                }
+            if(world.getBlockState(pos.up()).isAir()) {
+                world.setBlockState(pos.up(), Blocks.WATER.getDefaultState());
+            }
+            else {
+                world.setBlockState(pos, Blocks.WATER.getDefaultState());
             }
 
         }
