@@ -2,6 +2,8 @@ package net.tomahawk.tutorialmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.client.item.ModelPredicateProviderRegistry;
+import net.minecraft.util.Identifier;
 import net.tomahawk.tutorialmod.block.ModBlocks;
 import net.tomahawk.tutorialmod.item.ModItemGroups;
 import net.tomahawk.tutorialmod.item.ModItems;
@@ -17,9 +19,12 @@ public class TutorialMod implements ModInitializer {
 	public void onInitialize() {
 
 		ModItems.registerItems();
+
 		ModItemGroups.registerItemGroups();
 		ModBlocks.registerModBlocks();
 		ModLootTableModifiers.modifyLootTables();
 		LOGGER.info("Hello Fabric world!");
 	}
+
+
 }

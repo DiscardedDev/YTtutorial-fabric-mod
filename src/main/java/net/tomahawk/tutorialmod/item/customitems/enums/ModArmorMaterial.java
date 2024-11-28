@@ -1,4 +1,4 @@
-package net.tomahawk.tutorialmod.item;
+package net.tomahawk.tutorialmod.item.customitems.enums;
 
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.ArmorMaterial;
@@ -55,8 +55,8 @@ public enum ModArmorMaterial implements ArmorMaterial {
     @Override
     public int getProtection(ArmorItem.Type type) {
         // Protection values for all the slots.
-        // For reference, diamond uses 3 for boots, 6 for leggings, 8 for chestplate, and 3 for helmet,
-        // whilst leather uses 1, 2, 3 and 1 respectively.
+        // For reference, diamond uses 3 for boots&helmet, 6 for leggings, 8 for chestplate
+        // whilst leather uses 1, 2 & 3 respectively.
         return switch (type) {
             case BOOTS, HELMET -> this.handbProtection;
             case LEGGINGS -> this.leggingsProtection;
@@ -67,6 +67,7 @@ public enum ModArmorMaterial implements ArmorMaterial {
 
     @Override
     public int getEnchantability() {
+        //For reference, Iron is 9, Leather is 15, Diamond is 10
         return this.enchantability;
     }
 
@@ -87,11 +88,14 @@ public enum ModArmorMaterial implements ArmorMaterial {
 
     @Override
     public float getToughness() {
+        //For reference, only diamond (2.0f) and netherite (3.0f) have toughness
         return this.toughness;
     }
 
     @Override
     public float getKnockbackResistance() {
+        //For reference, no base armor has knockback
+        // change this value to 0.XF, where X is the level of knockback resistance you want.
         return this.knockbackResistance;
     }
 }

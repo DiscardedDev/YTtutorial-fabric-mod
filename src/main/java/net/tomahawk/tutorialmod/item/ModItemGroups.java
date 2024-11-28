@@ -43,6 +43,7 @@ public class ModItemGroups {
                         entries.add(ModItems.COPPER_CHESTPLATE);
                         entries.add(ModItems.COPPER_LEGGINGS);
                         entries.add(ModItems.COPPER_BOOTS);
+                        entries.add(ModItems.TEST_BOW);
 
                     }).build());
     public static final ItemGroup TOOLS = Registry.register(Registries.ITEM_GROUP, new Identifier(TutorialMod.MOD_ID, "modtools"),

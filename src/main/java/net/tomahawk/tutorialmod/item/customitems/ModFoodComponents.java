@@ -1,4 +1,4 @@
-package net.tomahawk.tutorialmod.item;
+package net.tomahawk.tutorialmod.item.customitems;
 
 import net.minecraft.item.FoodComponent;
 

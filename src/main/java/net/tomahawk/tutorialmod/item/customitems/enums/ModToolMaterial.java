@@ -1,4 +1,4 @@
-package net.tomahawk.tutorialmod.item;
+package net.tomahawk.tutorialmod.item.customitems.enums;
 
 import net.fabricmc.yarn.constants.MiningLevels;
 import net.minecraft.item.Items;

@@ -6,7 +6,12 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.tomahawk.tutorialmod.TutorialMod;
-import net.tomahawk.tutorialmod.item.custom.MetalDetectorItem;
+import net.tomahawk.tutorialmod.item.customitems.AbilityBowItem;
+import net.tomahawk.tutorialmod.item.customitems.MetalDetectorItem;
+import net.tomahawk.tutorialmod.item.customitems.enums.AbilityBowType;
+import net.tomahawk.tutorialmod.item.customitems.enums.ModArmorMaterial;
+import net.tomahawk.tutorialmod.item.customitems.ModFoodComponents;
+import net.tomahawk.tutorialmod.item.customitems.enums.ModToolMaterial;
 
 public class ModItems {
 
@@ -28,6 +33,9 @@ public class ModItems {
     public static final Item CHEESESLICE = registerItem("cheeseslice", new Item(new FabricItemSettings().food(ModFoodComponents.CHEESESLICE)));
     public static final Item HAM_AND_CHEESE = registerItem("hamandcheese", new Item(new FabricItemSettings().food(ModFoodComponents.HAM_AND_CHEESE)));
     public static final Item HAMSLICE = registerItem("hamslice", new Item(new FabricItemSettings().food(ModFoodComponents.CHEESESLICE)));
+
+
+    public static final Item TEST_BOW = registerItem("test_bow", new AbilityBowItem(new Item.Settings().maxDamage(500), 15, AbilityBowType.TNT));
 
 
     private static Item registerItem(String name, Item item) {
